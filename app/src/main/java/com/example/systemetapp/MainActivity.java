@@ -57,6 +57,7 @@ public class MainActivity extends AppCompatActivity {
         products.add(p1);
         products.add(p2);
     }
+    //hej
 
     private void setupListView() {
         // look up a reference to the ListView object
