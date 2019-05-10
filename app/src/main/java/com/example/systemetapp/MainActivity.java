@@ -10,6 +10,7 @@ import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.EditText;
 import android.widget.ListView;
@@ -70,6 +71,15 @@ public class MainActivity extends AppCompatActivity {
 
         // Set listView's adapter to the new adapter
         listView.setAdapter(adapter);
+        listView.setOnItemClickListener(new AdapterView.OnItemClickListener()
+        { @Override
+            public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
+            favorites.add(adapter.getItem(i));
+            System.out.println("sasas");
+            Log.d("click", "opop");
+        }
+
+        });
 
     }
 
@@ -94,6 +104,8 @@ public class MainActivity extends AppCompatActivity {
         }
         return productList;
     }
+
+   private List<Product> favorites = new ArrayList<>();
 
     @Override
         public boolean onOptionsItemSelected(MenuItem item) {
