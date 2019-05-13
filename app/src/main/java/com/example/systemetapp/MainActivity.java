@@ -1,5 +1,6 @@
 package com.example.systemetapp;
 
+import android.content.Context;
 import android.content.DialogInterface;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
@@ -14,6 +15,7 @@ import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.EditText;
 import android.widget.ListView;
+import android.widget.Toast;
 
 import com.android.volley.Request;
 import com.android.volley.RequestQueue;
@@ -75,8 +77,12 @@ public class MainActivity extends AppCompatActivity {
         { @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
             favorites.add(adapter.getItem(i));
-            System.out.println("sasas");
-            Log.d("click", "opop");
+            Context context = getApplicationContext();
+            CharSequence text = "Added to favorites";
+            int duration = Toast.LENGTH_LONG;
+
+            Toast toast = Toast.makeText(context, text, duration);
+            toast.show();
         }
 
         });
