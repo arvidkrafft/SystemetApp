@@ -1,8 +1,11 @@
 package com.example.systemetapp.domain;
 
+import android.os.Parcel;
+import android.os.Parcelable;
+
 import java.util.Comparator;
 
-public class Product {
+public class Product implements Parcelable {
 
     private String name;
     private double price; // SEK
@@ -11,6 +14,28 @@ public class Product {
     private int nr; // XML: <nr>nnn</nr> unique nr in the catalog
     private String productGroup; // e.g. <Varugrupp>Okryddad sprit</Varugrupp>
     private String type; // e.g. <Typ>Syrlig öl</Typ>
+
+    @Override
+    public int describeContents() {
+        return 0;
+    }
+
+    @Override
+    public void writeToParcel(Parcel dest, int flags) {
+        dest.writeString(name); dest.writeDouble(price); dest.writeDouble(alcohol);
+        dest.writeInt(volume); dest.writeInt(nr); dest.writeString(productGroup);
+        dest.writeString(type);
+    }
+
+    public static final Parcelable.Creator CREATOR = new Parcelable.Creator(){
+        public Product createFromParcel(Parcel in){
+            return new Product(in);
+        }
+
+        public Product[] newArray(int size){
+            return new Product[size];
+        }
+    };
 
     /**
      * Defines a Builder for an Object.
@@ -117,6 +142,16 @@ public class Product {
         this.alcohol = alcohol;
         this.price = price;
         this.volume = volume;
+    }
+
+    public Product(Parcel in){
+        this.name = in.readString();
+        this.price = in.readDouble();
+        this.alcohol = in.readDouble();
+        this.volume = in.readInt();
+        this.nr = in.readInt();
+        this.productGroup = in.readString();
+        this.type = in.readString();
     }
 
     /**

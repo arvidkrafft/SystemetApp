@@ -2,6 +2,8 @@ package com.example.systemetapp;
 
 import android.content.Context;
 import android.content.DialogInterface;
+import android.content.Intent;
+import android.os.Parcelable;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -83,6 +85,12 @@ public class MainActivity extends AppCompatActivity {
 
             Toast toast = Toast.makeText(context, text, duration);
             toast.show();
+
+            Intent intent;
+            intent = new Intent(MainActivity.this, ScrollingActivity.class);
+            startActivity(intent);
+            intent.putParcelableArrayListExtra("favorites", new ArrayList<Parcelable>(favorites));
+
         }
 
         });
@@ -112,6 +120,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
    private List<Product> favorites = new ArrayList<>();
+
 
     @Override
         public boolean onOptionsItemSelected(MenuItem item) {
