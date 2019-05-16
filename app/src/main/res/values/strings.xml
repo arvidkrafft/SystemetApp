@@ -7,4 +7,7 @@
 
     </string>
     <string name="action_settings">Settings</string>
+    <string name="nej">Nej</string>
+    <string name="ja">Ja</string>
+    <string name="_20_r_eller_ldre">20 år eller äldre?</string>
 </resources>
