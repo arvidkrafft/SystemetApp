@@ -61,6 +61,7 @@ public class MainActivity extends AppCompatActivity {
                 .volume(330).build();
         products.add(p1);
         products.add(p2);
+
     }
     //hej
 
@@ -88,8 +89,8 @@ public class MainActivity extends AppCompatActivity {
 
             Intent intent;
             intent = new Intent(MainActivity.this, ScrollingActivity.class);
-            startActivity(intent);
             intent.putParcelableArrayListExtra("favorites", new ArrayList<Parcelable>(favorites));
+            startActivity(intent);
 
         }
 
