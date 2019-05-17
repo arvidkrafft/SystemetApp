@@ -266,5 +266,9 @@ public class MainActivity extends AppCompatActivity {
     }
 
 
-
+    public void onButtonClick(View v){
+        Intent myIntent;
+        myIntent = new Intent(getBaseContext(),   ButtonActivity.class);
+        startActivity(myIntent);
+    }
 }
