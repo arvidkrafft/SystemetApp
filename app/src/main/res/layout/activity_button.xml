@@ -29,8 +29,8 @@
         android:layout_height="100dp"
         android:text="@string/nej"
         android:id="@+id/Nej"
-        android:layout_alignTop="@+id/suggest"
-        android:layout_toEndOf="@+id/suggest"
+        android:layout_alignTop="@+id/Ja"
+        android:layout_toEndOf="@+id/Ja"
         android:layout_alignParentEnd="true"
         android:onClick="onButtonClickNo"/>
 </RelativeLayout>
