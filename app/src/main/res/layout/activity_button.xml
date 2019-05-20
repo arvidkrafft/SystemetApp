@@ -3,24 +3,24 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.example.systemetapp.MainActivity">
+    tools:context="com.example.systemetapp.ButtonActivity">
 
     <TextView
-        android:id="@+id/tvSumma"
+        android:id="@+id/Myndig"
         android:layout_width="wrap_content"
         android:layout_height="90dp"
         android:text="@string/_20_r_eller_ldre"
         android:textSize="55sp" />
 
     <Button
-        android:id="@+id/suggest"
+        android:id="@+id/Ja"
         android:layout_width="200dp"
         android:layout_height="100dp"
         android:layout_alignParentStart="true"
         android:layout_alignParentBottom="true"
         android:layout_marginStart="0dp"
         android:layout_marginBottom="293dp"
-        android:onClick="onButtonClick"
+        android:onClick="onButtonClickYes"
         android:text="@string/ja" />
 
 
@@ -28,9 +28,9 @@
         android:layout_width="200dp"
         android:layout_height="100dp"
         android:text="@string/nej"
-        android:id="@+id/rate"
+        android:id="@+id/Nej"
         android:layout_alignTop="@+id/suggest"
         android:layout_toEndOf="@+id/suggest"
         android:layout_alignParentEnd="true"
-        />
+        android:onClick="onButtonClickNo"/>
 </RelativeLayout>

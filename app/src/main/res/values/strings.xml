@@ -10,4 +10,7 @@
     <string name="nej">Nej</string>
     <string name="ja">Ja</string>
     <string name="_20_r_eller_ldre">20 år eller äldre?</string>
+    <string name="no">Nej</string>
+    <string name="yes">Ja</string>
+    <string name="_20">20?</string>
 </resources>

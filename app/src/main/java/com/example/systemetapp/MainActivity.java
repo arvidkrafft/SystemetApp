@@ -158,7 +158,10 @@ public class MainActivity extends AppCompatActivity {
 
         // setup listview (and friends)
         setupListView();
+        Intent intent;
+        intent = new Intent(MainActivity.this, ButtonActivity.class);
 
+        startActivity(intent);
 
     }
 
