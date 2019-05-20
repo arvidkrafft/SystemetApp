@@ -21,7 +21,7 @@ public class ButtonActivity extends AppCompatActivity {
     }
     public void onButtonClickNo(View view)
     {
-        finishAndRemoveTask();
+        this.finishAffinity();
     }
 }
 

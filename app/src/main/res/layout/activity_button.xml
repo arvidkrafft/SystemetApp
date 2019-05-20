@@ -25,12 +25,13 @@
 
 
     <Button
+        android:id="@+id/Nej"
         android:layout_width="200dp"
         android:layout_height="100dp"
-        android:text="@string/nej"
-        android:id="@+id/Nej"
         android:layout_alignTop="@+id/suggest"
-        android:layout_toEndOf="@+id/suggest"
         android:layout_alignParentEnd="true"
-        android:onClick="onButtonClickNo"/>
+        android:layout_marginEnd="11dp"
+        android:layout_toEndOf="@+id/suggest"
+        android:onClick="onButtonClickNo"
+        android:text="@string/nej" />
 </RelativeLayout>
