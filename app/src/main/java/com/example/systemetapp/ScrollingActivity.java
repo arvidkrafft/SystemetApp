@@ -40,8 +40,10 @@ public class ScrollingActivity extends AppCompatActivity {
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
+                Snackbar.make(view, "Returning to main", Snackbar.LENGTH_LONG)
                         .setAction("Action", null).show();
+
+                finish();
             }
         });
         //Toast toast = Toast.makeText(getApplicationContext(), list.get(0).toString(), Toast.LENGTH_LONG);

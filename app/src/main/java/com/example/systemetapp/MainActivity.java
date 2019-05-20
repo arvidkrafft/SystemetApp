@@ -4,6 +4,8 @@ import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Parcelable;
+import android.support.design.widget.FloatingActionButton;
+import android.support.design.widget.Snackbar;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -87,13 +89,27 @@ public class MainActivity extends AppCompatActivity {
             Toast toast = Toast.makeText(context, text, duration);
             toast.show();
 
-            Intent intent;
-            intent = new Intent(MainActivity.this, ScrollingActivity.class);
-            intent.putParcelableArrayListExtra("favorites", new ArrayList<Parcelable>(favorites));
-            startActivity(intent);
+            //Intent intent;
+            //intent = new Intent(MainActivity.this, ScrollingActivity.class);
+            //intent.putParcelableArrayListExtra("favorites", new ArrayList<Parcelable>(favorites));
+            //startActivity(intent);
 
         }
 
+        });
+
+        FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
+        fab.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Snackbar.make(view, "Going to favorites", Snackbar.LENGTH_LONG)
+                        .setAction("Action", null).show();
+
+                Intent intent;
+                intent = new Intent(MainActivity.this, ScrollingActivity.class);
+                intent.putParcelableArrayListExtra("favorites", new ArrayList<Parcelable>(favorites));
+                startActivity(intent);
+            }
         });
 
     }
@@ -121,6 +137,8 @@ public class MainActivity extends AppCompatActivity {
     }
 
    private List<Product> favorites = new ArrayList<>();
+
+
 
 
     @Override
