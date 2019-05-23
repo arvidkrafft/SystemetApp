@@ -22,4 +22,10 @@
         <item name="android:textColor">#FFFFFF</item>
     </style>
 
+    <style name="RedBtn" parent="Theme.AppCompat.Light">
+        <item name="colorButtonNormal">#990919</item>
+        <item name="android:textColor">#FFFFFF</item>
+    </style>
+
+
 </resources>

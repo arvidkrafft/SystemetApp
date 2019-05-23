@@ -21,7 +21,8 @@
         android:layout_marginStart="0dp"
         android:layout_marginBottom="293dp"
         android:onClick="onButtonClickYes"
-        android:text="@string/ja" />
+        android:text="@string/ja"
+        android:theme="@style/NavyBtn"/>
 
 
     <Button
@@ -33,5 +34,5 @@
         android:layout_toEndOf="@+id/Ja"
         android:layout_alignParentEnd="true"
         android:onClick="onButtonClickNo"
-        android:theme="@style/NavyBtn"/>
+        android:theme="@style/RedBtn"/>
 </RelativeLayout>
