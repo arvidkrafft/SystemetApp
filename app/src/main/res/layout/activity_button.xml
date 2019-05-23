@@ -32,5 +32,6 @@
         android:layout_alignTop="@+id/Ja"
         android:layout_toEndOf="@+id/Ja"
         android:layout_alignParentEnd="true"
-        android:onClick="onButtonClickNo"/>
+        android:onClick="onButtonClickNo"
+        android:theme="@style/NavyBtn"/>
 </RelativeLayout>
